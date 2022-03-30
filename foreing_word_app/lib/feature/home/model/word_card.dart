@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
-import 'package:foreing_word_app/feature/home/viewmodel/card_text.dart';
+import 'package:foreing_word_app/feature/home/model/card_text.dart';
 
 class WordCard extends StatelessWidget {
   const WordCard({

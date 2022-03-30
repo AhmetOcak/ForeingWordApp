@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
 import 'package:foreing_word_app/feature/home/model/bot_nav_bar.dart';
-import 'package:foreing_word_app/feature/home/viewmodel/word_card.dart';
+import 'package:foreing_word_app/feature/home/model/word_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -22,11 +22,13 @@ class HomeView extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          WordCard(primaryWord: "alien", secondaryWord: "uzaylı",),
+          WordCard(
+            primaryWord: "alien",
+            secondaryWord: "uzaylı",
+          ),
         ],
       ),
       bottomNavigationBar: const BotNavBar(),
     );
   }
 }
-
