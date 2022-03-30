@@ -10,7 +10,11 @@ const Color SECONDARY_COLOR = Color(0xFFFFDE03);
 const Color WHITE = Color(0xFFFFFFFF);
 const String HOME = "Home";
 const String ADD_WORD = "Add Word";
-const double APP_BAR_ELEVATION = 0;
-const double BOTTOM_NAV_BAR_ELEVATION = 0;
 const int SELECTED_INDEX = 0;
+const double ELEVATION = 0;
+const double CARD_HEIGHT = 150;
+const double CARD_HORIZONTAL_PADDING = 40;
+const double CARD_VERTICAL_PADDING = 10;
+const Color CARD_TEXT_COLOR = Color(0xFF000000);
+const double CARD_TEXT_SIZE = 20;
 
