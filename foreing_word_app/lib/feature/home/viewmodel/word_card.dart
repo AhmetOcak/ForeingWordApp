@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
+import 'package:foreing_word_app/feature/home/viewmodel/card_text.dart';
 
 class WordCard extends StatelessWidget {
   const WordCard({
-    Key? key,
+    Key? key, required this.primaryWord, required this.secondaryWord,
   }) : super(key: key);
+
+  final String primaryWord;
+  final String secondaryWord;
 
   @override
   Widget build(BuildContext context) {
@@ -20,36 +24,24 @@ class WordCard extends StatelessWidget {
         child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
-              Text(
-                "MERHABA",
-                style: TextStyle(
-                  color: CARD_TEXT_COLOR,
-                  fontSize: CARD_TEXT_SIZE,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center,
-              ),
-              RotatedBox(
+            children: [
+              CardText(word: primaryWord,),
+              const RotatedBox(
                 quarterTurns: 1,
                 child: Icon(
                   Icons.compare_arrows_outlined,
                   color: PRIMARY_COLOR,
                 ),
               ),
-              Text(
-                "HELLO",
-                style: TextStyle(
-                  color: CARD_TEXT_COLOR,
-                  fontSize: CARD_TEXT_SIZE,
-                  fontWeight: FontWeight.bold,
-                ),
-                textAlign: TextAlign.center,
-              ),
+              CardText(word: secondaryWord,),
             ],
           ),
         ),
       ),
     );
   }
+
+
 }
+
+
