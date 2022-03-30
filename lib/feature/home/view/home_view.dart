@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foreing_word_app/core/components/appbar/word_app_bar.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
 import 'package:foreing_word_app/feature/home/model/bot_nav_bar.dart';
 import 'package:foreing_word_app/feature/home/model/word_card.dart';
@@ -10,16 +11,7 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PRIMARY_COLOR,
-      appBar: AppBar(
-        title: const Text(
-          APP_NAME,
-          style: TextStyle(
-            color: WHITE,
-          ),
-        ),
-        backgroundColor: PRIMARY_COLOR,
-        elevation: ELEVATION,
-      ),
+      appBar: const WordAppBar(),
       body: ListView(
         children: [
           WordCard(
@@ -32,3 +24,5 @@ class HomeView extends StatelessWidget {
     );
   }
 }
+
+
