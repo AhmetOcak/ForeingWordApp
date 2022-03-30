@@ -22,7 +22,7 @@ class HomeView extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          WordCard(),
+          WordCard(primaryWord: "alien", secondaryWord: "uzaylı",),
         ],
       ),
       bottomNavigationBar: const BotNavBar(),
