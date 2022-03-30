@@ -3,7 +3,7 @@ import 'package:foreing_word_app/core/components/appbar/word_app_bar.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
 
 class AddWordView extends StatefulWidget {
-  AddWordView({Key? key}) : super(key: key);
+  const AddWordView({Key? key}) : super(key: key);
 
   @override
   State<AddWordView> createState() => _AddWordViewState();
@@ -15,7 +15,13 @@ class _AddWordViewState extends State<AddWordView> {
     return Scaffold(
       backgroundColor: PRIMARY_COLOR,
       appBar: const WordAppBar(),
-      body: Column(),
+      body: Column(
+        children: [
+          Center(
+            child: Text("addwordview"),
+          )
+        ],
+      ),
     );
   }
 }

@@ -21,5 +21,5 @@ class WordAppBar extends StatelessWidget with PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(100);
+  Size get preferredSize => const Size.fromHeight(DEFAULT_APP_BAR_HEIGHT);
 }
