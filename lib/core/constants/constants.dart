@@ -1,6 +1,8 @@
 // ignore_for_file: constant_identifier_names
 
 import 'package:flutter/cupertino.dart';
+import 'package:foreing_word_app/feature/add_word/view/addword_view.dart';
+import 'package:foreing_word_app/feature/home/view/home_view.dart';
 
 const String APP_NAME = "ForeingWord";
 
@@ -16,6 +18,14 @@ const double CARD_HORIZONTAL_PADDING = 40;
 const double CARD_VERTICAL_PADDING = 10;
 const Color CARD_TEXT_COLOR = Color(0xFF000000);
 const double CARD_TEXT_SIZE = 20;
+const double DEFAULT_APP_BAR_HEIGHT = 56.0;
+
+const PAGES = [
+  HomeView(),
+  AddWordView(),
+];
+
+int selectedIndex = 0;
 
 TextStyle cardTextStyle() {
   return const TextStyle(
