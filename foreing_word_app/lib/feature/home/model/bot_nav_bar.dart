@@ -19,7 +19,7 @@ class _BotNavBarState extends State<BotNavBar> {
       backgroundColor: PRIMARY_COLOR,
       selectedItemColor: SECONDARY_COLOR,
       unselectedItemColor: WHITE,
-      elevation: BOTTOM_NAV_BAR_ELEVATION,
+      elevation: ELEVATION,
       currentIndex: _selectedIndex,
       items: const [
         BottomNavigationBarItem(

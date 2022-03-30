@@ -4,7 +4,7 @@ import 'package:foreing_word_app/feature/home/view/home_view.dart';
 void main() {
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
-    home: HomeView(),
+    home: const HomeView(),
     theme: ThemeData(
       splashColor: Colors.transparent,
       highlightColor: Colors.transparent,
