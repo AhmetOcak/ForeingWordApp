@@ -1,16 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
 import 'package:foreing_word_app/feature/home/model/bot_nav_bar.dart';
+import 'package:foreing_word_app/feature/home/viewmodel/word_card.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
-
-  @override
-  State<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView> {
-  int _selectedIndex = SELECTED_INDEX;
 
   @override
   Widget build(BuildContext context) {
@@ -24,15 +18,15 @@ class _HomeViewState extends State<HomeView> {
           ),
         ),
         backgroundColor: PRIMARY_COLOR,
-        elevation: APP_BAR_ELEVATION,
+        elevation: ELEVATION,
       ),
-      body: Center(
-        child: Column(),
+      body: ListView(
+        children: [
+          WordCard(),
+        ],
       ),
       bottomNavigationBar: const BotNavBar(),
     );
   }
 }
-
-
 
