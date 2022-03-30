@@ -1,4 +1,3 @@
-
 // ignore_for_file: constant_identifier_names
 
 import 'package:flutter/cupertino.dart';
@@ -18,3 +17,10 @@ const double CARD_VERTICAL_PADDING = 10;
 const Color CARD_TEXT_COLOR = Color(0xFF000000);
 const double CARD_TEXT_SIZE = 20;
 
+TextStyle cardTextStyle() {
+  return const TextStyle(
+    color: CARD_TEXT_COLOR,
+    fontSize: CARD_TEXT_SIZE,
+    fontWeight: FontWeight.bold,
+  );
+}
