@@ -5,7 +5,7 @@ import 'package:foreing_word_app/feature/add_word/viewmodel/addword_viewmodel.da
 
 class ButtonModel {
   CustomElevatedButton customElevatedButton(
-      TextEditingController textEditingController) {
+      TextEditingController primaryTextEditinController, TextEditingController secondaryTextEditinController) {
     return CustomElevatedButton(
       buttonPadding: const EdgeInsets.only(
         top: BUTTON_TOP_PADDING,
@@ -19,7 +19,7 @@ class ButtonModel {
         ),
       ),
       onPressed: () {
-        AddWordViewModel().checkTextField(textEditingController.text);
+        AddWordViewModel().checkTextField(primaryTextEditinController.text, secondaryTextEditinController.text);
       },
       buttonTextPadding: const EdgeInsets.all(
         BUTTON_TEXT_PADDING,

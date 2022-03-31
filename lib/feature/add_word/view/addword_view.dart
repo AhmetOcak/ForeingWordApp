@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foreing_word_app/core/components/appbar/custom_appbar.dart';
 import 'package:foreing_word_app/core/components/button/custom_button.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
+import 'package:foreing_word_app/core/utils/user_simple_preferences.dart';
 import 'package:foreing_word_app/feature/add_word/model/button.dart';
 import 'package:foreing_word_app/feature/add_word/model/textfied.dart';
 import 'package:foreing_word_app/feature/add_word/viewmodel/addword_viewmodel.dart';
@@ -14,7 +15,8 @@ class AddWordView extends StatefulWidget {
 }
 
 class _AddWordViewState extends State<AddWordView> {
-  final TextEditingController _textEditingController = TextEditingController();
+  final TextEditingController _primaryTextFieldController = TextEditingController();
+  final TextEditingController _secondaryTextFieldController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +35,9 @@ class _AddWordViewState extends State<AddWordView> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TextFieldModel().customTextField(context, _textEditingController),
-          ButtonModel().customElevatedButton(_textEditingController),
+          TextFieldModel().customTextField(context, _primaryTextFieldController, TEXTFIELD_P_TEXT),
+          TextFieldModel().customTextField(context, _secondaryTextFieldController, TEXTFIELD_S_TEXT),
+          ButtonModel().customElevatedButton(_primaryTextFieldController, _secondaryTextFieldController),
         ],
       ),
     );
