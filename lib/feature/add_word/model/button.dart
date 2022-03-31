@@ -19,7 +19,7 @@ class ButtonModel {
         ),
       ),
       onPressed: () {
-        AddWordViewModel().checkTextField(primaryTextEditinController.text, secondaryTextEditinController.text);
+        AddWordViewModel().addWord(primaryTextEditinController.text, secondaryTextEditinController.text);
       },
       buttonTextPadding: const EdgeInsets.all(
         BUTTON_TEXT_PADDING,

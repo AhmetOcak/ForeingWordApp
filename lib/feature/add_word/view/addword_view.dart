@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foreing_word_app/core/components/appbar/custom_appbar.dart';
-import 'package:foreing_word_app/core/components/button/custom_button.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
-import 'package:foreing_word_app/core/utils/user_simple_preferences.dart';
 import 'package:foreing_word_app/feature/add_word/model/button.dart';
 import 'package:foreing_word_app/feature/add_word/model/textfied.dart';
-import 'package:foreing_word_app/feature/add_word/viewmodel/addword_viewmodel.dart';
 
 class AddWordView extends StatefulWidget {
   const AddWordView({Key? key}) : super(key: key);
