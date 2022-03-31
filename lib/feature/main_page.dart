@@ -14,6 +14,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: PRIMARY_COLOR,
       body: PAGES[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: PRIMARY_COLOR,
@@ -30,7 +31,9 @@ class _MainPageState extends State<MainPage> {
         currentIndex: _selectedIndex,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(
+              Icons.home,
+            ),
             label: HOME,
           ),
           BottomNavigationBarItem(

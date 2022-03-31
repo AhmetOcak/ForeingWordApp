@@ -7,6 +7,7 @@ class ButtonModel {
   CustomElevatedButton customElevatedButton(
     TextEditingController primaryTextEditinController,
     TextEditingController secondaryTextEditinController,
+    BuildContext context,
   ) {
     return CustomElevatedButton(
       buttonPadding: const EdgeInsets.only(
@@ -21,8 +22,13 @@ class ButtonModel {
         ),
       ),
       onPressed: () {
-        AddWordViewModel().addWord(primaryTextEditinController.text,
-            secondaryTextEditinController.text);
+        AddWordViewModel().addWord(
+          primaryTextEditinController.text,
+          secondaryTextEditinController.text,
+        );
+        FocusScope.of(context).unfocus();
+        primaryTextEditinController.clear();
+        secondaryTextEditinController.clear();
       },
       buttonTextPadding: const EdgeInsets.all(
         BUTTON_TEXT_PADDING,

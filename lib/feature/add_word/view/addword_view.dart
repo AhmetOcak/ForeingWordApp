@@ -34,7 +34,7 @@ class _AddWordViewState extends State<AddWordView> {
         children: [
           TextFieldModel().customTextField(context, _primaryTextFieldController, TEXTFIELD_P_TEXT),
           TextFieldModel().customTextField(context, _secondaryTextFieldController, TEXTFIELD_S_TEXT),
-          ButtonModel().customElevatedButton(_primaryTextFieldController, _secondaryTextFieldController),
+          ButtonModel().customElevatedButton(_primaryTextFieldController, _secondaryTextFieldController, context),
         ],
       ),
     );
