@@ -22,7 +22,6 @@ class _MainPageState extends State<MainPage> {
         onPageChanged: (index) {
           setState(() {
             _selectedIndex = index;
-            print(index);
           });
         },
       ),
