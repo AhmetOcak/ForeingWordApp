@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:foreing_word_app/feature/add_word/view/addword_view.dart';
-import 'package:foreing_word_app/feature/home/view/home_view.dart';
 import 'package:foreing_word_app/feature/main_page.dart';
 
 void main() {
