@@ -9,8 +9,8 @@ const String APP_NAME = "ForeingWord";
 const Color PRIMARY_COLOR = Color(0xFF0336FF);
 const Color SECONDARY_COLOR = Color(0xFFFFDE03);
 const Color WHITE = Color(0xFFFFFFFF);
-const String HOME = "Home";
-const String ADD_WORD = "Add Word";
+const String HOME = "HOME";
+const String ADD_WORD = "ADD WORD";
 const String BUTTON_TEXT = "Add the Word";
 const String TEXTFIELD_P_TEXT = "Primary Word";
 const String TEXTFIELD_S_TEXT = "Secondary Word";
@@ -26,6 +26,8 @@ const double TEXTFIELD_TB_PADDING = 16.0;
 const double BUTTON_TOP_PADDING = 16.0;
 const double BUTTON_TEXT_PADDING = 16.0;
 const double BUTTON_TEXT_SIZE = 16.0;
+const double SELECTED_ICON_SIZE = 24.0;
+const double UNSELECTED_ICON_SIZE = 18.0;
 
 const PAGES = [
   HomeView(),

@@ -20,6 +20,13 @@ class _MainPageState extends State<MainPage> {
         selectedItemColor: SECONDARY_COLOR,
         unselectedItemColor: WHITE,
         elevation: ELEVATION,
+        showUnselectedLabels: false,
+        selectedIconTheme: const IconThemeData(
+          size: SELECTED_ICON_SIZE,
+        ),
+        unselectedIconTheme: const IconThemeData(
+          size: UNSELECTED_ICON_SIZE,
+        ),
         currentIndex: _selectedIndex,
         items: const [
           BottomNavigationBarItem(
