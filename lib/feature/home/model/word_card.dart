@@ -4,7 +4,9 @@ import 'package:foreing_word_app/feature/home/model/card_text.dart';
 
 class WordCard extends StatelessWidget {
   const WordCard({
-    Key? key, required this.primaryWord, required this.secondaryWord,
+    Key? key,
+    required this.primaryWord,
+    required this.secondaryWord,
   }) : super(key: key);
 
   final String primaryWord;
@@ -25,7 +27,9 @@ class WordCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              CardText(word: primaryWord,),
+              CardText(
+                word: primaryWord,
+              ),
               const RotatedBox(
                 quarterTurns: 1,
                 child: Icon(
@@ -33,15 +37,13 @@ class WordCard extends StatelessWidget {
                   color: PRIMARY_COLOR,
                 ),
               ),
-              CardText(word: secondaryWord,),
+              CardText(
+                word: secondaryWord,
+              ),
             ],
           ),
         ),
       ),
     );
   }
-
-
 }
-
-
