@@ -10,12 +10,22 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   int _selectedIndex = SELECTED_INDEX;
+  final PageController _pageController = PageController();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PRIMARY_COLOR,
-      body: PAGES[_selectedIndex],
+      body: PageView(
+        children: PAGES,
+        controller: _pageController,
+        onPageChanged: (index) {
+          setState(() {
+            _selectedIndex = index;
+            print(index);
+          });
+        },
+      ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: PRIMARY_COLOR,
         selectedItemColor: SECONDARY_COLOR,
@@ -46,6 +56,13 @@ class _MainPageState extends State<MainPage> {
         onTap: (value) {
           setState(() {
             _selectedIndex = value;
+            _pageController.animateToPage(
+              value,
+              duration: const Duration(
+                milliseconds: PAGE_CHANGE_DURATION,
+              ),
+              curve: Curves.linearToEaseOut,
+            );
           });
         },
       ),

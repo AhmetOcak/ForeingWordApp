@@ -28,6 +28,8 @@ const double BUTTON_TEXT_PADDING = 16.0;
 const double BUTTON_TEXT_SIZE = 16.0;
 const double SELECTED_ICON_SIZE = 24.0;
 const double UNSELECTED_ICON_SIZE = 18.0;
+const int ANIMATED_ICON_DURATION = 1000;
+const int PAGE_CHANGE_DURATION = 1000;
 
 const PAGES = [
   HomeView(),
