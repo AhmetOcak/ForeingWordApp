@@ -18,7 +18,6 @@ class _HomeViewState extends State<HomeView> {
   void initState() {
     _wordList = UserSimplePreferences.getWordList() ?? [];
     super.initState();
-    print(_wordList);
   }
 
   @override
@@ -38,9 +37,18 @@ class _HomeViewState extends State<HomeView> {
       body: ListView.builder(
         itemCount: _wordList.length ~/ 2,
         itemBuilder: (context, index) {
-          return WordCard(
-            primaryWord: _wordList[index * 2],
-            secondaryWord: _wordList[(index * 2) + 1],
+          return Dismissible(
+            key: UniqueKey(),
+            onDismissed: (value) {
+              UserSimplePreferences.deleteWordFromList(index * 2, (index * 2) + 1);
+              setState(() {
+                _wordList = UserSimplePreferences.getWordList()!;
+              });
+            },
+            child: WordCard(
+              primaryWord: _wordList[index * 2],
+              secondaryWord: _wordList[(index * 2) + 1],
+            ),
           );
         },
       ),
