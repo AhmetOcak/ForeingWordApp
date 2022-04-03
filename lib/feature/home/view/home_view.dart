@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:foreing_word_app/core/components/appbar/custom_appbar.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
 import 'package:foreing_word_app/core/utils/user_simple_preferences.dart';
+import 'package:foreing_word_app/feature/home/model/app_bar.dart';
 import 'package:foreing_word_app/feature/home/model/word_card.dart';
 
 class HomeView extends StatefulWidget {
@@ -24,23 +24,15 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PRIMARY_COLOR,
-      appBar: const CustomAppBar(
-        backgroundColor: PRIMARY_COLOR,
-        elevation: ELEVATION,
-        title: Text(
-          APP_NAME,
-          style: TextStyle(
-            color: WHITE,
-          ),
-        ),
-      ),
+      appBar: AppBarModel().customAppBar(),
       body: ListView.builder(
         itemCount: _wordList.length ~/ 2,
         itemBuilder: (context, index) {
           return Dismissible(
             key: UniqueKey(),
             onDismissed: (value) {
-              UserSimplePreferences.deleteWordFromList(index * 2, (index * 2) + 1);
+              UserSimplePreferences.deleteWordFromList(
+                  index * 2, (index * 2) + 1);
               setState(() {
                 _wordList = UserSimplePreferences.getWordList()!;
               });
@@ -54,4 +46,6 @@ class _HomeViewState extends State<HomeView> {
       ),
     );
   }
+
+
 }
