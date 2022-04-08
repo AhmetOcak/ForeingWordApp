@@ -6,12 +6,10 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await UserSimplePreferences.init();
 
-  runApp(MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: const MainPage(),
-    theme: ThemeData(
-      splashColor: Colors.transparent,
-      highlightColor: Colors.transparent,
+  runApp(
+    const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MainPage(),
     ),
-  ));
+  );
 }
