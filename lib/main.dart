@@ -7,9 +7,13 @@ Future main() async {
   await UserSimplePreferences.init();
 
   runApp(
-    const MaterialApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: MainPage(),
+      home: const MainPage(),
+      theme: ThemeData(
+        highlightColor: Colors.transparent,
+        splashColor: Colors.transparent,
+      ),
     ),
   );
 }
