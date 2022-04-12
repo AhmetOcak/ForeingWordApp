@@ -12,29 +12,37 @@ class AddWordView extends StatefulWidget {
 }
 
 class _AddWordViewState extends State<AddWordView> {
-  final TextEditingController _primaryTextFieldController = TextEditingController();
-  final TextEditingController _secondaryTextFieldController = TextEditingController();
-
+  final TextEditingController _primaryTextFieldController =
+      TextEditingController();
+  final TextEditingController _secondaryTextFieldController =
+      TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: PRIMARY_COLOR,
       appBar: const CustomAppBar(
-        backgroundColor: PRIMARY_COLOR,
         elevation: ELEVATION,
         title: Text(
           APP_NAME,
-          style: TextStyle(
-            color: WHITE,
-          ),
         ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          TextFieldModel().customTextField(context, _primaryTextFieldController, TEXTFIELD_P_TEXT),
-          TextFieldModel().customTextField(context, _secondaryTextFieldController, TEXTFIELD_S_TEXT),
-          ButtonModel().customElevatedButton(_primaryTextFieldController, _secondaryTextFieldController, context),
+          TextFieldModel().customTextField(
+            context,
+            _primaryTextFieldController,
+            TEXTFIELD_P_TEXT,
+          ),
+          TextFieldModel().customTextField(
+            context,
+            _secondaryTextFieldController,
+            TEXTFIELD_S_TEXT,
+          ),
+          ButtonModel().customElevatedButton(
+            _primaryTextFieldController,
+            _secondaryTextFieldController,
+            context,
+          ),
         ],
       ),
     );

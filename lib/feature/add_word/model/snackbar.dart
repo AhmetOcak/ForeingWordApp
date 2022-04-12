@@ -8,8 +8,8 @@ class SnackBarModel {
         content,
         textAlign: TextAlign.center,
         style: const TextStyle(
-          color: PRIMARY_COLOR,
-          fontWeight: FontWeight.bold,
+          //color: PRIMARY_COLOR,
+          //fontWeight: FontWeight.bold,
         ),
       ),
       elevation: ELEVATION,
@@ -17,7 +17,7 @@ class SnackBarModel {
         seconds: 1,
       ),
       behavior: SnackBarBehavior.floating,
-      backgroundColor: SECONDARY_COLOR,
+      //backgroundColor: SECONDARY_COLOR,
     );
   }
 }

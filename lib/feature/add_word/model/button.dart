@@ -18,9 +18,6 @@ class ButtonModel {
         elevation: MaterialStateProperty.all(
           ELEVATION,
         ),
-        backgroundColor: MaterialStateProperty.all(
-          SECONDARY_COLOR,
-        ),
       ),
       onPressed: () {
         final isTrue = AddWordViewModel().addWord(
@@ -45,10 +42,10 @@ class ButtonModel {
       ),
       text: const Text(
         BUTTON_TEXT,
-        style: TextStyle(
-          color: PRIMARY_COLOR,
+        /*style: TextStyle(
+          color: WHITE,
           fontSize: BUTTON_TEXT_SIZE,
-        ),
+        ),*/
       ),
     );
   }

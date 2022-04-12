@@ -11,8 +11,7 @@ Future main() async {
       debugShowCheckedModeBanner: false,
       home: const MainPage(),
       theme: ThemeData(
-        highlightColor: Colors.transparent,
-        splashColor: Colors.transparent,
+        brightness: Brightness.dark,
       ),
     ),
   );

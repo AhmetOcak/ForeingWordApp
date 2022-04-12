@@ -15,7 +15,10 @@ class CustomTextField extends StatelessWidget {
       this.focusedBorder,
       this.labelStyle,
       this.labelText,
-      this.focusColor})
+      this.focusColor,
+      this.focusNode,
+      this.onTap,
+      })
       : super(key: key);
 
   final TextEditingController? controller;
@@ -27,12 +30,16 @@ class CustomTextField extends StatelessWidget {
   final TextStyle? labelStyle;
   final String? labelText;
   final Color? focusColor;
+  final FocusNode? focusNode;
+  final Function? onTap;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: padding ?? const EdgeInsets.all(DEFAULT_PADDING_VALUE),
       child: TextField(
+        onTap: () => onTap,
+        focusNode: focusNode,
         controller: controller,
         cursorColor: cursorColor,
         style: style,

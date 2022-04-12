@@ -15,7 +15,6 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: PRIMARY_COLOR,
       body: PageView(
         children: PAGES,
         controller: _pageController,
@@ -26,9 +25,6 @@ class _MainPageState extends State<MainPage> {
         },
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: PRIMARY_COLOR,
-        selectedItemColor: SECONDARY_COLOR,
-        unselectedItemColor: WHITE,
         elevation: ELEVATION,
         showUnselectedLabels: false,
         selectedIconTheme: const IconThemeData(

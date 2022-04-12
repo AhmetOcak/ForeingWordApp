@@ -34,7 +34,7 @@ class WordCard extends StatelessWidget {
                 quarterTurns: 1,
                 child: Icon(
                   Icons.compare_arrows_outlined,
-                  color: PRIMARY_COLOR,
+                  color: CARD_ICON_COLOR,
                 ),
               ),
               CardText(

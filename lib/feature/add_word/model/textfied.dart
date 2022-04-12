@@ -13,25 +13,15 @@ class TextFieldModel {
         MediaQuery.of(context).size.width * 0.15,
         TEXTFIELD_TB_PADDING,
       ),
-      cursorColor: SECONDARY_COLOR,
-      style: const TextStyle(
-        color: WHITE,
-      ),
       enabledBorder: const OutlineInputBorder(
-        borderSide: BorderSide(
-          color: SECONDARY_COLOR,
-        ),
+        borderSide: BorderSide(),
       ),
       focusedBorder: const OutlineInputBorder(
         borderSide: BorderSide(
-          color: SECONDARY_COLOR,
+          color: Colors.blue
         ),
       ),
-      labelStyle: const TextStyle(
-        color: SECONDARY_COLOR,
-      ),
       labelText: text,
-      focusColor: SECONDARY_COLOR,
     );
   }
 }
