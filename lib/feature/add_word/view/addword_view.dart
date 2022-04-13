@@ -16,6 +16,14 @@ class _AddWordViewState extends State<AddWordView> {
       TextEditingController();
   final TextEditingController _secondaryTextFieldController =
       TextEditingController();
+
+  @override
+  void dispose() {
+    _primaryTextFieldController.dispose();
+    _secondaryTextFieldController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
