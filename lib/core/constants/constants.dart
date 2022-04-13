@@ -11,7 +11,7 @@ const Color PRIMARY_COLOR = Color(0xFF0336FF);
 const Color SECONDARY_COLOR = Color(0xFFFFDE03);
 const Color WHITE = Color(0xFFFFFFFF);
 const Color CARD_TEXT_COLOR = Color(0xFF000000);
-const Color CARD_ICON_COLOR = Color(0xFF64FFDA);
+const Color ERROR_COLOR = Color(0xFFFF604F);
 
 // TEXTS
 const String HOME = "MY WORDS";
@@ -36,7 +36,7 @@ const double BUTTON_TEXT_PADDING = 16.0;
 const double BUTTON_TEXT_SIZE = 16.0;
 const double SELECTED_ICON_SIZE = 24.0;
 const double UNSELECTED_ICON_SIZE = 18.0;
-const int PAGE_CHANGE_DURATION = 1000;
+const int PAGE_CHANGE_DURATION = 500;
 const double APPBAR_ACTION_PADDING = 16.0;
 
 
@@ -49,6 +49,7 @@ const PAGES = [
 // CARD TEXTSTYLE
 TextStyle cardTextStyle() {
   return const TextStyle(
+    color: CARD_TEXT_COLOR,
     fontSize: CARD_TEXT_SIZE,
     fontWeight: FontWeight.bold,
   );

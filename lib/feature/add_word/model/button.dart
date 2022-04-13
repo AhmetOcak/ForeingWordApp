@@ -18,6 +18,9 @@ class ButtonModel {
         elevation: MaterialStateProperty.all(
           ELEVATION,
         ),
+        backgroundColor: MaterialStateProperty.all(
+          SECONDARY_COLOR,
+        ),
       ),
       onPressed: () {
         final isTrue = AddWordViewModel().addWord(
@@ -29,11 +32,21 @@ class ButtonModel {
           primaryTextEditinController.clear();
           secondaryTextEditinController.clear();
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBarModel().snackBar(SUCCESSFULL, context),
+            SnackBarModel().snackBar(
+              SUCCESSFULL,
+              context,
+              PRIMARY_COLOR,
+              SECONDARY_COLOR,
+            ),
           );
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
-            SnackBarModel().snackBar(UNSUCCESSFULL, context),
+            SnackBarModel().snackBar(
+              UNSUCCESSFULL,
+              context,
+              WHITE,
+              ERROR_COLOR,
+            ),
           );
         }
       },
@@ -42,10 +55,10 @@ class ButtonModel {
       ),
       text: const Text(
         BUTTON_TEXT,
-        /*style: TextStyle(
-          color: WHITE,
+        style: TextStyle(
+          color: PRIMARY_COLOR,
           fontSize: BUTTON_TEXT_SIZE,
-        ),*/
+        ),
       ),
     );
   }

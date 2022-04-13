@@ -4,7 +4,10 @@ import 'package:foreing_word_app/core/constants/constants.dart';
 
 class TextFieldModel {
   CustomTextField customTextField(
-      BuildContext context, TextEditingController textEditingController, String text) {
+    BuildContext context,
+    TextEditingController textEditingController,
+    String text,
+  ) {
     return CustomTextField(
       controller: textEditingController,
       padding: EdgeInsets.fromLTRB(
@@ -14,14 +17,22 @@ class TextFieldModel {
         TEXTFIELD_TB_PADDING,
       ),
       enabledBorder: const OutlineInputBorder(
-        borderSide: BorderSide(),
+        borderSide: BorderSide(
+          color: SECONDARY_COLOR,
+        ),
       ),
       focusedBorder: const OutlineInputBorder(
         borderSide: BorderSide(
-          color: Colors.blue
+          color: SECONDARY_COLOR,
         ),
       ),
       labelText: text,
+      style: const TextStyle(
+        color: SECONDARY_COLOR,
+      ),
+      labelStyle: const TextStyle(
+        color: SECONDARY_COLOR,
+      ),
     );
   }
 }
