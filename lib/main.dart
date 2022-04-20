@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
 import 'package:foreing_word_app/core/utils/user_simple_preferences.dart';
-import 'package:foreing_word_app/feature/main_page.dart';
+import 'package:foreing_word_app/feature/add_word/view/addword_view.dart';
+import 'package:foreing_word_app/feature/home/view/home_view.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -9,8 +10,11 @@ Future main() async {
 
   runApp(
     MaterialApp(
+      routes: {
+        '/': (context) => const HomeView(),
+        '/addWordScreen': (context) => const AddWordView(),
+      },
       debugShowCheckedModeBanner: false,
-      home: const MainPage(),
       theme: ThemeData(
         splashFactory: NoSplash.splashFactory,
         scaffoldBackgroundColor: PRIMARY_COLOR,
