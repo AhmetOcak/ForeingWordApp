@@ -22,9 +22,14 @@ const String TEXTFIELD_S_TEXT = "Secondary Word";
 const String SUCCESSFULL = "The word has been successfully added!!";
 const String UNSUCCESSFULL = "Please fill in all fields!!";
 
+// ROUTE NAME
+const String HOME_SCREEN = '/';
+const String ADD_WORD_SCREEN = '/addWordScreen';
+
 // DIMENS
 const int SELECTED_INDEX = 0;
 const double ELEVATION = 0;
+const double FLOAT_ACT_BUTTON_ELEV = 0;
 const double CARD_HEIGHT = 125;
 const double CARD_HORIZONTAL_PADDING = 40;
 const double CARD_VERTICAL_PADDING = 10;

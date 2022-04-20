@@ -24,7 +24,7 @@ class _MainPageState extends State<MainPage> {
           });
         },
       ),
-      bottomNavigationBar: bottomNavBar(),
+      //bottomNavigationBar: bottomNavBar(),
     );
   }
 
