@@ -3,7 +3,7 @@ import 'package:foreing_word_app/core/components/appbar/custom_appbar.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
 import 'package:foreing_word_app/feature/add_word/model/button.dart';
 import 'package:foreing_word_app/feature/add_word/model/textfied.dart';
-import 'package:foreing_word_app/feature/home/view/home_view.dart';
+import 'package:foreing_word_app/feature/add_word/viewmodel/addword_viewmodel.dart';
 
 class AddWordView extends StatefulWidget {
   const AddWordView({Key? key}) : super(key: key);
@@ -28,16 +28,7 @@ class _AddWordViewState extends State<AddWordView> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async {
-        Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (builder) => const HomeView(),
-          ),
-          (route) => false,
-        );
-        return true;
-      },
+      onWillPop: () => AddWordViewModel().onBackPressed(context),
       child: Scaffold(
         appBar: CustomAppBar(
           elevation: ELEVATION,
@@ -45,15 +36,7 @@ class _AddWordViewState extends State<AddWordView> {
             APP_NAME,
           ),
           leading: IconButton(
-            onPressed: () {
-              Navigator.pushAndRemoveUntil(
-                context,
-                MaterialPageRoute(
-                  builder: (builder) => const HomeView(),
-                ),
-                (route) => false,
-              );
-            },
+            onPressed: () => AddWordViewModel().returnHomeScreen(context),
             icon: const Icon(
               Icons.arrow_back,
               color: WHITE,
