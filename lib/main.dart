@@ -16,6 +16,9 @@ Future main() async {
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: SECONDARY_COLOR,
+        ),
         splashFactory: NoSplash.splashFactory,
         scaffoldBackgroundColor: PRIMARY_COLOR,
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(

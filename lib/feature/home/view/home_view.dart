@@ -28,6 +28,9 @@ class _HomeViewState extends State<HomeView> {
       floatingActionButton: const CustomFloatActionButton(),
       appBar: AppBarModel().customAppBar(),
       body: ListView.builder(
+        padding: const EdgeInsets.only(
+          bottom: LISTVIEW_BUILDER_BOTTOM_PAD,
+        ),
         itemCount: _wordList.length ~/ 2,
         itemBuilder: (context, index) {
           return dismissible(index);
