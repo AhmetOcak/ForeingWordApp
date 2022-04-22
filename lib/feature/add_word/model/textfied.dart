@@ -9,6 +9,7 @@ class TextFieldModel {
     String text,
   ) {
     return CustomTextField(
+      cursorColor: SECONDARY_COLOR,
       controller: textEditingController,
       padding: EdgeInsets.fromLTRB(
         MediaQuery.of(context).size.width * 0.15,
@@ -28,7 +29,7 @@ class TextFieldModel {
       ),
       labelText: text,
       style: const TextStyle(
-        color: SECONDARY_COLOR,
+        color: WHITE,
       ),
       labelStyle: const TextStyle(
         color: SECONDARY_COLOR,

@@ -36,7 +36,7 @@ class ButtonModel {
               SUCCESSFULL,
               context,
               PRIMARY_COLOR,
-              SECONDARY_COLOR,
+              SNACKBAR_SUCCESSFULL_COLOR,
             ),
           );
         } else {
@@ -44,7 +44,7 @@ class ButtonModel {
             SnackBarModel().snackBar(
               UNSUCCESSFULL,
               context,
-              WHITE,
+              PRIMARY_COLOR,
               ERROR_COLOR,
             ),
           );

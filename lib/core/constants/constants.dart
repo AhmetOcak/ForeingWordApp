@@ -7,11 +7,18 @@ import 'package:foreing_word_app/feature/home/view/home_view.dart';
 const String APP_NAME = "ForeingWord";
 
 // COLORS
-const Color PRIMARY_COLOR = Color(0xFF0336FF);
-const Color SECONDARY_COLOR = Color(0xFFFFDE03);
+const Color PRIMARY_COLOR = Color(0xFF000000);
+const Color SECONDARY_COLOR = Color(0xFFC9040E);
 const Color WHITE = Color(0xFFFFFFFF);
 const Color CARD_TEXT_COLOR = Color(0xFF000000);
+const Color ERROR_COLOR = Color(0xFFC9040E);
+const Color SNACKBAR_SUCCESSFULL_COLOR = Color(0xFF39FF14);
+
+/*
+const Color PRIMARY_COLOR = Color(0xFF0336FF);
+const Color SECONDARY_COLOR = Color(0xFFFFDE03);
 const Color ERROR_COLOR = Color(0xFFFF604F);
+*/
 
 // TEXTS
 const String HOME = "MY WORDS";

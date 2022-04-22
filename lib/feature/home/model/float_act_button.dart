@@ -13,7 +13,7 @@ class CustomFloatActionButton extends StatelessWidget {
       onPressed: () {
         HomeViewModel().goToNextScreen(context);
       },
-      backgroundColor: SECONDARY_COLOR,
+      backgroundColor: WHITE,
       elevation: FLOAT_ACT_BUTTON_ELEV,
       child: const Icon(
         Icons.add,
