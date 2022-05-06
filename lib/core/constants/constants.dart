@@ -28,10 +28,13 @@ const String TEXTFIELD_P_TEXT = "Primary Word";
 const String TEXTFIELD_S_TEXT = "Secondary Word";
 const String SUCCESSFULL = "The word has been successfully added!!";
 const String UNSUCCESSFULL = "Please fill in all fields!!";
+const String WORD_GAME = "Word Game";
+const String WORD_GAME_BUTTON_TEXT = "Guess";
 
 // ROUTE NAME
 const String HOME_SCREEN = '/';
 const String ADD_WORD_SCREEN = '/addWordScreen';
+const String WORD_GAME_SCREEN = '/wordGameScreen';
 
 // DIMENS
 const int SELECTED_INDEX = 0;
@@ -62,7 +65,7 @@ const PAGES = [
 // CARD TEXTSTYLE
 TextStyle cardTextStyle() {
   return const TextStyle(
-    color: CARD_TEXT_COLOR,
+    color: PRIMARY_COLOR,
     fontSize: CARD_TEXT_SIZE,
     fontWeight: FontWeight.bold,
   );
