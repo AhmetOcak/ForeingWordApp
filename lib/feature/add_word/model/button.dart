@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foreing_word_app/core/components/button/custom_button.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
-import 'package:foreing_word_app/feature/add_word/model/snackbar.dart';
 import 'package:foreing_word_app/feature/add_word/viewmodel/addword_viewmodel.dart';
 
 class ButtonModel {
@@ -23,32 +22,11 @@ class ButtonModel {
         ),
       ),
       onPressed: () {
-        final isTrue = AddWordViewModel().addWord(
-          primaryTextEditinController.text,
-          secondaryTextEditinController.text,
+        AddWordViewModel().checkAddWord(
+          context,
+          primaryTextEditinController,
+          secondaryTextEditinController,
         );
-        if (isTrue) {
-          FocusScope.of(context).unfocus();
-          primaryTextEditinController.clear();
-          secondaryTextEditinController.clear();
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBarModel().snackBar(
-              SUCCESSFULL,
-              context,
-              PRIMARY_COLOR,
-              SNACKBAR_SUCCESSFULL_COLOR,
-            ),
-          );
-        } else {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBarModel().snackBar(
-              UNSUCCESSFULL,
-              context,
-              PRIMARY_COLOR,
-              ERROR_COLOR,
-            ),
-          );
-        }
       },
       buttonTextPadding: const EdgeInsets.all(
         BUTTON_TEXT_PADDING,
