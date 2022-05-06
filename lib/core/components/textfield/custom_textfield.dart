@@ -18,6 +18,7 @@ class CustomTextField extends StatelessWidget {
       this.focusColor,
       this.focusNode,
       this.onTap,
+      this.textAling
       })
       : super(key: key);
 
@@ -32,6 +33,7 @@ class CustomTextField extends StatelessWidget {
   final Color? focusColor;
   final FocusNode? focusNode;
   final Function? onTap;
+  final TextAlign? textAling;
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +44,7 @@ class CustomTextField extends StatelessWidget {
         focusNode: focusNode,
         controller: controller,
         cursorColor: cursorColor,
+        textAlign: textAling ?? TextAlign.start,
         style: style,
         decoration: InputDecoration(
           enabledBorder: enabledBorder,
