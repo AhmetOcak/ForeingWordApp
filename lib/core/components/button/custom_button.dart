@@ -9,14 +9,14 @@ class CustomElevatedButton extends StatelessWidget {
     Key? key,
     this.buttonPadding,
     this.buttonStyle,
-    this.onPressed,
+    required this.onPressed,
     this.buttonTextPadding,
     this.text,
   }) : super(key: key);
 
   final EdgeInsetsGeometry? buttonPadding;
   final ButtonStyle? buttonStyle;
-  final Function? onPressed;
+  final Function onPressed;
   final EdgeInsetsGeometry? buttonTextPadding;
   final Text? text;
 
