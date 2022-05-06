@@ -4,7 +4,6 @@ import 'package:foreing_word_app/core/utils/user_simple_preferences.dart';
 import 'package:foreing_word_app/feature/home/model/app_bar.dart';
 import 'package:foreing_word_app/feature/home/model/float_act_button.dart';
 import 'package:foreing_word_app/feature/home/model/word_card.dart';
-import 'package:foreing_word_app/feature/home/viewmodel/home_viewmodel.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({Key? key}) : super(key: key);
@@ -26,7 +25,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: const CustomFloatActionButton(),
-      appBar: AppBarModel().customAppBar(),
+      appBar: AppBarModel().customAppBar(context),
       body: ListView.builder(
         padding: const EdgeInsets.only(
           bottom: LISTVIEW_BUILDER_BOTTOM_PAD,
