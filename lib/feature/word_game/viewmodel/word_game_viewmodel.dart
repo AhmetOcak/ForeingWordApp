@@ -38,7 +38,6 @@ class WordGameViewModel {
       return false;
     }
   }
-  
 
   void wordGame(
     TextEditingController textEditingController,
@@ -50,7 +49,6 @@ class WordGameViewModel {
       );
       WordGameViewModel()._randomWord();
       if (result) {
-        FocusScope.of(context).unfocus();
         ScaffoldMessenger.of(context).showSnackBar(
           CustomSnackBarModel().snackBar(
             "True!!",

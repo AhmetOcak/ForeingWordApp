@@ -13,9 +13,9 @@ Future main() async {
   runApp(
     MaterialApp(
       routes: {
-        '/': (context) => const HomeView(),
-        '/addWordScreen': (context) => const AddWordView(),
-        '/wordGameScreen': (context) => WordGame()
+        HOME_SCREEN: (context) => const HomeView(),
+        ADD_WORD_SCREEN: (context) => const AddWordView(),
+        WORD_GAME_SCREEN: (context) => const WordGame()
       },
       debugShowCheckedModeBanner: false,
       theme: ThemeData(

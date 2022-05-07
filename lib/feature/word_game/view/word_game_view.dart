@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:foreing_word_app/core/components/appbar/custom_appbar.dart';
 import 'package:foreing_word_app/core/components/button/custom_button.dart';
@@ -6,7 +5,6 @@ import 'package:foreing_word_app/core/components/card/custom_card.dart';
 import 'package:foreing_word_app/core/constants/constants.dart';
 import 'package:foreing_word_app/core/utils/user_simple_preferences.dart';
 import 'package:foreing_word_app/feature/home/model/card_text.dart';
-import 'package:foreing_word_app/feature/word_game/model/button.dart';
 import 'package:foreing_word_app/feature/word_game/model/textfield.dart';
 import 'package:foreing_word_app/feature/word_game/viewmodel/word_game_viewmodel.dart';
 
@@ -55,7 +53,7 @@ class _WordGameState extends State<WordGame> {
             : [
                 const Center(
                   child: Text(
-                    "You don't have word!!",
+                    NO_WORD,
                     style: TextStyle(
                       color: ERROR_COLOR,
                       fontSize: 24,
@@ -72,10 +70,10 @@ class _WordGameState extends State<WordGame> {
     return CustomElevatedButton(
       onPressed: () {
         setState(() {
-        WordGameViewModel().wordGame(
-          _textEditingController,
-          context,
-        );
+          WordGameViewModel().wordGame(
+            _textEditingController,
+            context,
+          );
           _index = WordGameViewModel.index;
         });
       },

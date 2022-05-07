@@ -15,7 +15,7 @@ class CustomSnackBarModel {
       ),
       elevation: ELEVATION,
       duration: const Duration(
-        seconds: 1,
+        seconds: SNACKBAR_DURATION,
       ),
       behavior: SnackBarBehavior.floating,
       backgroundColor: backgroundColor,

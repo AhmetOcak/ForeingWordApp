@@ -30,6 +30,7 @@ const String SUCCESSFULL = "The word has been successfully added!!";
 const String UNSUCCESSFULL = "Please fill in all fields!!";
 const String WORD_GAME = "Word Game";
 const String WORD_GAME_BUTTON_TEXT = "Guess";
+const String NO_WORD = "You don't have words!!";
 
 // ROUTE NAME
 const String HOME_SCREEN = '/';
@@ -54,6 +55,9 @@ const double UNSELECTED_ICON_SIZE = 18.0;
 const int PAGE_CHANGE_DURATION = 500;
 const double APPBAR_ACTION_PADDING = 16.0;
 const double LISTVIEW_BUILDER_BOTTOM_PAD = 10.0;
+
+// DURATIONS
+const int SNACKBAR_DURATION = 1;
 
 
 // PAGE ARRAY FOR BOTTOM NAVIGATION BAR
