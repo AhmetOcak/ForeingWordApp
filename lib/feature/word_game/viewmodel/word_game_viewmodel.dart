@@ -18,6 +18,9 @@ class WordGameViewModel {
       if (randomNumber % 2 == 0 && _tempIndex != index) {
         _tempIndex = randomNumber;
         break;
+      }else if(randomNumber % 2 == 0 &&  _wordList!.length <= 2) {
+        _tempIndex = randomNumber;
+        break;
       }
     }
     return _wordList![randomNumber];
