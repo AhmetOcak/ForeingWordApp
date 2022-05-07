@@ -39,6 +39,14 @@ class _WordGameState extends State<WordGame> {
         children: !WordGameViewModel().wordListIsNull()
             ? [
                 CustomCard(
+                  elevation: ELEVATION,
+                  height: CARD_HEIGHT,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  padding: const EdgeInsets.only(
+                    left: CARD_HORIZONTAL_PADDING,
+                    right: CARD_HORIZONTAL_PADDING,
+                    top: CARD_VERTICAL_PADDING,
+                  ),
                   children: [
                     CardText(
                       word: _wordList![_index],
@@ -48,7 +56,12 @@ class _WordGameState extends State<WordGame> {
                 TextFieldModel(
                   textEditingController: _textEditingController,
                 ),
-                button(context),
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: BUTTON_TOP_PADDING,
+                  ),
+                  child: button(context),
+                ),
               ]
             : [
                 const Center(
@@ -86,9 +99,6 @@ class _WordGameState extends State<WordGame> {
           color: PRIMARY_COLOR,
           fontSize: BUTTON_TEXT_SIZE,
         ),
-      ),
-      buttonPadding: const EdgeInsets.only(
-        top: BUTTON_TOP_PADDING,
       ),
       buttonStyle: ButtonStyle(
         elevation: MaterialStateProperty.all(

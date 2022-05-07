@@ -56,10 +56,15 @@ class _AddWordViewState extends State<AddWordView> {
               _secondaryTextFieldController,
               TEXTFIELD_S_TEXT,
             ),
-            ButtonModel().customElevatedButton(
-              _primaryTextFieldController,
-              _secondaryTextFieldController,
-              context,
+            Padding(
+              padding: const EdgeInsets.only(
+                top: BUTTON_TOP_PADDING,
+              ),
+              child: ButtonModel().customElevatedButton(
+                _primaryTextFieldController,
+                _secondaryTextFieldController,
+                context,
+              ),
             ),
           ],
         ),

@@ -1,28 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:foreing_word_app/core/constants/constants.dart';
 
 class CustomCard extends StatelessWidget {
   const CustomCard({
     Key? key,
     required this.children,
+    required this.height,
+    required this.padding,
+    required this.elevation,
+    required this.mainAxisAlignment,
   }) : super(key: key);
 
   final List<Widget> children;
+  final double height;
+  final EdgeInsetsGeometry padding;
+  final double elevation;
+  final MainAxisAlignment mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: CARD_HEIGHT,
-      padding: const EdgeInsets.only(
-        left: CARD_HORIZONTAL_PADDING,
-        right: CARD_HORIZONTAL_PADDING,
-        top: CARD_VERTICAL_PADDING,
-      ),
+      height: height,
+      padding: padding,
       child: Card(
-        elevation: ELEVATION,
+        elevation: elevation,
         child: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: mainAxisAlignment,
             children: children,
           ),
         ),

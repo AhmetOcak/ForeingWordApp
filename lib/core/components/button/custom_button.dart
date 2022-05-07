@@ -7,30 +7,25 @@ const double DEFAULT_PADDING = 0;
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({
     Key? key,
-    this.buttonPadding,
     this.buttonStyle,
     required this.onPressed,
     this.buttonTextPadding,
     this.text,
   }) : super(key: key);
 
-  final EdgeInsetsGeometry? buttonPadding;
   final ButtonStyle? buttonStyle;
-  final Function onPressed;
+  final void Function() onPressed;
   final EdgeInsetsGeometry? buttonTextPadding;
   final Text? text;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: buttonPadding ?? const EdgeInsets.all(DEFAULT_PADDING),
-      child: ElevatedButton(
-        style: buttonStyle,
-        onPressed: onPressed as void Function(),
-        child: Padding(
-          padding: buttonTextPadding ?? const EdgeInsets.all(DEFAULT_PADDING),
-          child: text,
-        ),
+    return ElevatedButton(
+      style: buttonStyle,
+      onPressed: onPressed,
+      child: Padding(
+        padding: buttonTextPadding ?? const EdgeInsets.all(DEFAULT_PADDING),
+        child: text,
       ),
     );
   }

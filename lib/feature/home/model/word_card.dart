@@ -16,6 +16,14 @@ class WordCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomCard(
+      elevation: ELEVATION,
+      height: CARD_HEIGHT,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      padding: const EdgeInsets.only(
+        left: CARD_HORIZONTAL_PADDING,
+        right: CARD_HORIZONTAL_PADDING,
+        top: CARD_VERTICAL_PADDING,
+      ),
       children: [
         CardText(
           word: primaryWord,

@@ -10,9 +10,6 @@ class ButtonModel {
     BuildContext context,
   ) {
     return CustomElevatedButton(
-      buttonPadding: const EdgeInsets.only(
-        top: BUTTON_TOP_PADDING,
-      ),
       buttonStyle: ButtonStyle(
         elevation: MaterialStateProperty.all(
           ELEVATION,
