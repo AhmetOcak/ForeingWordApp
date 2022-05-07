@@ -8,13 +8,15 @@ import 'package:foreing_word_app/core/utils/user_simple_preferences.dart';
 class WordGameViewModel {
   final List<String>? _wordList = UserSimplePreferences.getWordList();
   static int index = 0;
+  static int _tempIndex = 999;
 
   String _randomWord() {
     int randomNumber = Random().nextInt(_wordList!.length);
     while (true) {
       randomNumber = Random().nextInt(_wordList!.length);
       index = randomNumber;
-      if (randomNumber % 2 == 0) {
+      if (randomNumber % 2 == 0 && _tempIndex != index) {
+        _tempIndex = randomNumber;
         break;
       }
     }
@@ -43,10 +45,10 @@ class WordGameViewModel {
     BuildContext context,
   ) {
     if (!WordGameViewModel().wordListIsNull()) {
-      WordGameViewModel()._randomWord();
       bool result = WordGameViewModel()._checkWord(
         textEditingController.text.toLowerCase(),
       );
+      WordGameViewModel()._randomWord();
       if (result) {
         FocusScope.of(context).unfocus();
         ScaffoldMessenger.of(context).showSnackBar(

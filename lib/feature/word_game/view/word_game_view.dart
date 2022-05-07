@@ -71,11 +71,11 @@ class _WordGameState extends State<WordGame> {
   CustomElevatedButton button(BuildContext context) {
     return CustomElevatedButton(
       onPressed: () {
+        setState(() {
         WordGameViewModel().wordGame(
           _textEditingController,
           context,
         );
-        setState(() {
           _index = WordGameViewModel.index;
         });
       },
