@@ -27,7 +27,6 @@ flutter_icons:
   android: true
   image_path: assets/wordAppIcon.png
 
-
 flutter:
   uses-material-design: true
 
