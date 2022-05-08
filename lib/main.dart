@@ -24,12 +24,6 @@ Future main() async {
         ),
         splashFactory: NoSplash.splashFactory,
         scaffoldBackgroundColor: PRIMARY_COLOR,
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          selectedItemColor: SECONDARY_COLOR,
-          unselectedItemColor: WHITE,
-          backgroundColor: Colors.transparent,
-          elevation: ELEVATION,
-        ),
         cardColor: SECONDARY_COLOR,
       ),
     ),
