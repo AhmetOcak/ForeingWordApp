@@ -38,21 +38,7 @@ class _WordGameState extends State<WordGame> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: !WordGameViewModel().wordListIsNull()
             ? [
-                CustomCard(
-                  elevation: ELEVATION,
-                  height: CARD_HEIGHT,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  padding: const EdgeInsets.only(
-                    left: CARD_HORIZONTAL_PADDING,
-                    right: CARD_HORIZONTAL_PADDING,
-                    top: CARD_VERTICAL_PADDING,
-                  ),
-                  children: [
-                    CardText(
-                      word: _wordList![_index],
-                    ),
-                  ],
-                ),
+                card(),
                 TextFieldModel(
                   textEditingController: _textEditingController,
                 ),
@@ -76,6 +62,24 @@ class _WordGameState extends State<WordGame> {
                 ),
               ],
       ),
+    );
+  }
+
+  CustomCard card() {
+    return CustomCard(
+      elevation: ELEVATION,
+      height: CARD_HEIGHT,
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      padding: const EdgeInsets.only(
+        left: CARD_HORIZONTAL_PADDING,
+        right: CARD_HORIZONTAL_PADDING,
+        top: CARD_VERTICAL_PADDING,
+      ),
+      children: [
+        CardText(
+          word: _wordList![_index],
+        ),
+      ],
     );
   }
 
