@@ -60,7 +60,7 @@ class AddWordViewModel {
         CustomSnackBarModel().snackBar(
           UNSUCCESSFULL,
           context,
-          WHITE,
+          PRIMARY_COLOR,
           ERROR_COLOR,
         ),
       );
