@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:foreing_word_app/feature/add_word/view/addword_view.dart';
 import 'package:foreing_word_app/feature/home/view/home_view.dart';
 
-const String APP_NAME = "ForeingWord";
+const String APP_NAME = "Yabancı Kelime Defteri";
 
 // COLORS
 const Color PRIMARY_COLOR = Color(0xFF000000);
