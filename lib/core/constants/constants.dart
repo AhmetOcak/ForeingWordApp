@@ -23,14 +23,14 @@ const Color ERROR_COLOR = Color(0xFFFF604F);
 // TEXTS
 const String HOME = "MY WORDS";
 const String ADD_WORD = "ADD WORD";
-const String BUTTON_TEXT = "Add the Word";
-const String TEXTFIELD_P_TEXT = "Primary Word";
-const String TEXTFIELD_S_TEXT = "Secondary Word";
-const String SUCCESSFULL = "The word has been successfully added!!";
-const String UNSUCCESSFULL = "Please fill in all fields!!";
-const String WORD_GAME = "Word Game";
-const String WORD_GAME_BUTTON_TEXT = "Guess";
-const String NO_WORD = "You don't have words!!";
+const String BUTTON_TEXT = "Kelime Ekle";
+const String TEXTFIELD_P_TEXT = "Birinci Kelime";
+const String TEXTFIELD_S_TEXT = "İkinci Kelime";
+const String SUCCESSFULL = "Kelime başarıyla eklendi!!";
+const String UNSUCCESSFULL = "Lütfen tüm boşlukları doldurunuz!!";
+const String WORD_GAME = "Kelime Oyunu";
+const String WORD_GAME_BUTTON_TEXT = "Tahmin Et";
+const String NO_WORD = "Sizin hiç kelimeniz yok!!";
 
 // ROUTE NAME
 const String HOME_SCREEN = '/';
