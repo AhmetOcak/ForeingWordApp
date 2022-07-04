@@ -36,17 +36,17 @@ class AddWordViewModel {
 
   void checkAddWord(
     BuildContext context,
-    TextEditingController primaryTextEditinController,
-    TextEditingController secondaryTextEditinController,
+    TextEditingController primaryTextEditingController,
+    TextEditingController secondaryTextEditingController,
   ) {
     final isTrue = AddWordViewModel()._addWord(
-      primaryTextEditinController.text,
-      secondaryTextEditinController.text,
+      primaryTextEditingController.text,
+      secondaryTextEditingController.text,
     );
     if (isTrue) {
       FocusScope.of(context).unfocus();
-      primaryTextEditinController.clear();
-      secondaryTextEditinController.clear();
+      primaryTextEditingController.clear();
+      secondaryTextEditingController.clear();
       ScaffoldMessenger.of(context).showSnackBar(
         CustomSnackBarModel().snackBar(
           SUCCESSFULL,

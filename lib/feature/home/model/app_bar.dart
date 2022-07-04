@@ -12,7 +12,10 @@ class AppBarModel {
       action: [
         IconButton(
           onPressed: () {
-            Navigator.pushNamed(context, WORD_GAME_SCREEN);
+            Navigator.pushNamed(
+              context,
+              WORD_GAME_SCREEN,
+            );
           },
           icon: const Icon(
             Icons.gamepad,
