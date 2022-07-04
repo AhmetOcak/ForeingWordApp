@@ -12,7 +12,7 @@ class CardText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      word.toUpperCase(),
+      word,
       style: cardTextStyle(),
       textAlign: TextAlign.center,
     );
