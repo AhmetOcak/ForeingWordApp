@@ -30,7 +30,7 @@ const String SUCCESSFULL = "Kelime başarıyla eklendi!!";
 const String UNSUCCESSFULL = "Lütfen tüm boşlukları doldurunuz!!";
 const String WORD_GAME = "Kelime Oyunu";
 const String WORD_GAME_BUTTON_TEXT = "Tahmin Et";
-const String NO_WORD = "Sizin hiç kelimeniz yok!!";
+const String NO_WORD = "Hiç kelimeniz yok :(";
 
 // ROUTE NAME
 const String HOME_SCREEN = '/';

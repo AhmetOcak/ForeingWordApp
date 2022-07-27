@@ -6,7 +6,6 @@ class UserSimplePreferences {
   static const _key = "wordlist";
   static final List<String>? _wordList = getWordList() ?? [];
   
-
   static Future init() async =>
     _preferences = await SharedPreferences.getInstance();
 
