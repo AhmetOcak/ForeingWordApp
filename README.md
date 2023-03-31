@@ -1,6 +1,8 @@
 # Yabancı Kelime Defteri
 
-A simple application where you can save foreign words with their meanings. 
+A simple application where you can save foreign words with their meanings.
+
+The words are stored with sharedpreferences.
 
 ## 🖼 Outputs
 
